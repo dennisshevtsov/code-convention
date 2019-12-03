@@ -36,4 +36,14 @@ class Foo
 #### 22. If a method contans more than 20 lines it is a occasion to refactor this method.
 #### 23. Do prefer using basic classes/interfaces instead concrete ones. IList instead List, IEnumerable instead IList.
 #### 24. Do prefer using arrays instead collections which have no max length.
-#### 25. 
+#### 25. Do use only extension methods to build LINQ chains.
+```csharp
+// correct
+orders.Where(order => order.Enabled)
+      .OrderBy(order => order.Created)
+      .FirstOrDefault();
+// incorrect
+(from order in orders
+where order.Enabled
+orderby order.Created).FirstOrDefault();
+```
