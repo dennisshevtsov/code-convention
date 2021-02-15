@@ -3,7 +3,7 @@
 #### 1. Do add an empty line in an end of a file.
 #### 2. Do not use multiple lines between ligical blocks. Do use one line.
 #### 3. Do not use this if is is not required.
-#### 4. sealed.
+#### 4. Do use the sealed modifier to each classes, except a case when you are going to inherit a class from it exactly.
 #### 5. Do not use the Enam postfix for name of enum.
 #### 6. Do use one file for one class, interface etc.
 #### 7. Do use access modifiers everytime. Do not hope a default access modifier value.
