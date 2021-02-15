@@ -30,7 +30,7 @@ class Foo
 #### 16. Max length of name of file, class, method etc.
 #### 17. Do use braces for each if, for etc.
 #### 18. Do use the order for members of a class. Costants, static members, fields, constructors, properties and methods. Public, internal, protected internal, protected and private.
-#### 19. 2 spaces per tab.
+#### 19. Do use 2 spaces per tab.
 #### 20. usings in namespace.
 #### 21. copyright in a top of each file.
 #### 22. If a method contans more than 20 lines it is a occasion to refactor this method.
