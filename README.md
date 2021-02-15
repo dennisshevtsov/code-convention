@@ -31,7 +31,7 @@ class Foo
 #### 17. Do use braces for each if, for etc.
 #### 18. Do use the order for members of a class. Costants, static members, fields, constructors, properties and methods. Public, internal, protected internal, protected and private.
 #### 19. Do use 2 spaces per tab.
-#### 20. usings in namespace.
+#### 20. Do put the usings block inside a namespace block.
 #### 21. copyright in a top of each file.
 #### 22. If a method contans more than 20 lines it is a occasion to refactor this method.
 #### 23. Do prefer using basic classes/interfaces instead concrete ones. IList instead List, IEnumerable instead IList.
