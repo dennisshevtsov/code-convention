@@ -5,7 +5,8 @@
 * Do not use multiple lines between ligical blocks. Do use one line.
 * Do not use this if is is not required.
 * Do use the sealed modifier to each classes, except a case when you are going to inherit a class from it exactly.
-* Do not use the Enam postfix for name of enum.
+* Do not use the Enam postfix for a name of an enum.
+* Do use a single noun as a name of an enum.
 * Do use one file for one class, interface etc.
 * Do use access modifiers everytime. Do not hope a default access modifier value.
 ```csharp
