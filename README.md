@@ -23,7 +23,7 @@ class Foo
 ```
 * Do add a doc comment for each public or internal class, method and property.
 * Do use one empty line between logical block. Do not use an empty line in an end of class, method etc.
-* Do use logical block #ifdef
+* Do use logical block #ifdef to group fields, properties, constructors etc. that have many lines that cannot be collapsed.
 * Do split usings to three logical blocks: microsoft, third-party, proj. Do sort usings alphabeticaly.
 * Do use coma after an enam value.
 * Do not use any commented code.
