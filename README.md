@@ -2,7 +2,6 @@
 
 * Do add an empty line in an end of a file.
 * Do turn on showing white spaces (VS: ctrl+R, ctrl+W).
-* Do not use multiple lines between ligical blocks. Do use one line.
 * Do not use this if is is not required.
 * Do use the sealed modifier to each classes, except a case when you are going to inherit a class from it exactly.
 * Do not use the Enam postfix for a name of an enum.
@@ -91,7 +90,7 @@ class Foo
 }
 ```
 * Do add a doc comment for each public or internal class, method and property.
-* Do use one empty line between logical block.
+* Do use one empty line between logical block. Do not use multiple lines between ligical blocks.
 * Do not use an empty line in an end of class, method etc.
 * Do use logical block #ifdef to configure code for an environment.
 * Do use logical block #region to group fields, properties, constructors etc. that have many lines that cannot be collapsed.
