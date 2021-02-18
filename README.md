@@ -219,6 +219,20 @@ public sealed SampleDto
 }
 ```
 * Do not use full attribute name. Do use a full name only for attribute class definition.
+```csharp
+// correct
+public sealed SampleDto
+{
+  [Required]
+  public string Property { get; set; }
+}
+// incorrect
+public sealed SampleDto
+{
+  [RequiredAttribute]
+  public string Property { get; set; }
+}
+```
 * Max length of name of file, class, method etc.
 * Do use braces for each if, for etc.
 * Do use the order for members of a class. Costants, static members, fields, constructors, properties and methods. Public, internal, protected internal, protected and private.
