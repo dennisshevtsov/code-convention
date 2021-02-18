@@ -35,6 +35,21 @@ public enum Colors
   Red,
 }
 ```
+* Do inherit an enum from *byte*, *int* etc. Prefer *byte*.
+```csharp
+//correct
+public enum Color : byte
+{
+  White,
+  Red,
+}
+//incorrect
+public enum Color
+{
+  White,
+  Red,
+}
+```
 * Do use one file for one class, interface etc.
 * Do use access modifiers everytime. Do not hope a default access modifier value.
 ```csharp
