@@ -14,6 +14,7 @@ public class Foo
     _boo = boo;
   }
 }
+
 // incorrect
 public class Foo
 {
@@ -32,13 +33,14 @@ public class Foo
 {
   private readonly int _boo;
 }
+
 // incorrect
 public class Foo
 {
   private readonly int boo;
 }
 ```
-* Do not use public or internal fields.
+* Do not use *public* or *internal* fields.
 ```csharp
 // correct
 public class Foo
@@ -46,6 +48,7 @@ public class Foo
   private int _field0;
   protected int _field1;
 }
+
 // incorrect
 public class Foo
 {
@@ -53,7 +56,7 @@ public class Foo
   internal int _field1;
 }
 ```
-* Do use the sealed modifier to each classes, except a case when you are going to inherit a class from it exactly.
+* Do use the *sealed* modifier to each classes, except a case when you are going to inherit a class from it exactly.
 * Do not use the Enam postfix for a name of an enum.
 ```csharp
 // correct
@@ -62,6 +65,7 @@ public enum Color
   White = 0,
   Red = 1,
 }
+
 // incorrect
 public enum ColorEnum
 {
@@ -77,6 +81,7 @@ public enum Color
   White = 0,
   Red = 1,
 }
+
 // incorrect
 public enum Colors
 {
@@ -92,6 +97,7 @@ public enum Color : byte
   White = 0,
   Red = 1,
 }
+
 // incorrect
 public enum Color
 {
@@ -107,18 +113,21 @@ public enum Color : byte
   White = 0,
   Red = 1,
 }
+
 public enum Pet : byte
 {
   None = 0,
   Cat = 1,
   Dog = 2,
 }
+
 // incorrect
 public enum Color : byte
 {
   White,
   Red,
 }
+
 public enum Pet : byte
 {
   Cat = 1,
@@ -133,6 +142,7 @@ internal class Foo
 {
   private int _boo;
 }
+
 // incorrect
 class Foo
 {
@@ -142,12 +152,49 @@ class Foo
 * Do add a doc comment for each public or internal class, method and property.
 * Do use one empty line between logical block. Do not use multiple lines between ligical blocks.
 * Do not use an empty line in an end of class, method etc.
-* Do use logical block #ifdef to configure code for an environment.
-* Do use logical block #region to group fields, properties, constructors etc. that have many lines that cannot be collapsed.
-* Do split usings to three logical blocks: microsoft, third-party, proj. Do sort usings alphabeticaly.
-* Do use coma after an enam value.
-* Do not use any commented code.
-* Do not write attributes in one line. Do use one line for one attribute.
+* Do use logical block *#ifdef* to configure code for an environment.
+* Do use logical block *#region* to group fields, properties, constructors etc. that have many lines that cannot be collapsed.
+* Do split usings to three logical blocks: microsoft, third-party, proj. Do sort usings alphabeticaly in a block.
+```csharp
+// correct
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+
+using Project;
+using Project.Core;
+
+// incorrect
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Project;
+using Project.Core;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+
+```
+* Do use comma after an enam value.
+* Do not keep any commented old code.
+* Do use one line for one attribute.
+```csharp
+// correct
+public sealed SampleDto
+{
+  [Required]
+  [MaxLength(10)]
+  public string Property { get; set; }
+}
+// incorrect
+public sealed SampleDto
+{
+  [Required, MaxLength(10)]
+  public string Property { get; set; }
+}
+```
 * Do not use full attribute name. Do use a full name only for attribute class definition.
 * Max length of name of file, class, method etc.
 * Do use braces for each if, for etc.
@@ -165,6 +212,7 @@ namespace Foo
     public Guid Id { get;set; }
   }
 }
+
 // incorrect
 using System;
 
@@ -178,7 +226,7 @@ namespace Foo
 ```
 * Do add the copyright block in a top of each file.
 * If a method contans more than 20 lines it is a occasion to refactor this method.
-* Do prefer using basic classes/interfaces instead concrete ones. IList instead List, IEnumerable instead IList.
+* Do prefer using basic classes/interfaces instead concrete ones. *IList<T>* instead *List<T>*, *IEnumerable<T>* instead *IList<T>* etc.
 * Do prefer using arrays instead collections which have no max length.
 * Do use only extension methods to build LINQ chains.
 ```csharp
@@ -186,6 +234,7 @@ namespace Foo
 orders.Where(order => order.Enabled)
       .OrderBy(order => order.Created)
       .FirstOrDefault();
+
 // incorrect
 (from order in orders
 where order.Enabled
