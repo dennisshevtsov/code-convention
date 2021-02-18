@@ -25,6 +25,19 @@ public class Foo
   }
 }
 ```
+* Do use prefix _ for a field.
+```csharp
+// correct
+public class Foo
+{
+  private readonly int _boo;
+}
+// incorrect
+public class Foo
+{
+  private readonly int boo;
+}
+```
 * Do use the sealed modifier to each classes, except a case when you are going to inherit a class from it exactly.
 * Do not use the Enam postfix for a name of an enum.
 ```csharp
