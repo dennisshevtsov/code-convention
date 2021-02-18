@@ -14,6 +14,7 @@ public class Foo
     _boo = boo;
   }
 }
+
 // incorrect
 public class Foo
 {
@@ -32,6 +33,7 @@ public class Foo
 {
   private readonly int _boo;
 }
+
 // incorrect
 public class Foo
 {
@@ -46,6 +48,7 @@ public class Foo
   private int _field0;
   protected int _field1;
 }
+
 // incorrect
 public class Foo
 {
@@ -62,6 +65,7 @@ public enum Color
   White = 0,
   Red = 1,
 }
+
 // incorrect
 public enum ColorEnum
 {
@@ -77,6 +81,7 @@ public enum Color
   White = 0,
   Red = 1,
 }
+
 // incorrect
 public enum Colors
 {
@@ -92,6 +97,7 @@ public enum Color : byte
   White = 0,
   Red = 1,
 }
+
 // incorrect
 public enum Color
 {
@@ -113,6 +119,7 @@ public enum Pet : byte
   Cat = 1,
   Dog = 2,
 }
+
 // incorrect
 public enum Color : byte
 {
@@ -133,6 +140,7 @@ internal class Foo
 {
   private int _boo;
 }
+
 // incorrect
 class Foo
 {
@@ -156,6 +164,7 @@ using Microsoft.AspNetCore.Mvc;
 
 using Project;
 using Project.Core;
+
 // incorrect
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -177,6 +186,7 @@ public sealed SampleDto
   [MaxLength(10)]
   public string Property { get; set; }
 }
+
 // incorrect
 public sealed SampleDto
 {
@@ -201,6 +211,7 @@ namespace Foo
     public Guid Id { get;set; }
   }
 }
+
 // incorrect
 using System;
 
@@ -222,6 +233,7 @@ namespace Foo
 orders.Where(order => order.Enabled)
       .OrderBy(order => order.Created)
       .FirstOrDefault();
+
 // incorrect
 (from order in orders
 where order.Enabled
