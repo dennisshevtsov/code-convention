@@ -38,6 +38,7 @@ public class Foo
   private readonly int boo;
 }
 ```
+* Do not use public or internal fields.
 * Do use the sealed modifier to each classes, except a case when you are going to inherit a class from it exactly.
 * Do not use the Enam postfix for a name of an enum.
 ```csharp
