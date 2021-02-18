@@ -39,6 +39,20 @@ public class Foo
 }
 ```
 * Do not use public or internal fields.
+```csharp
+// correct
+public class Foo
+{
+  private int _field0;
+  protected int _field1;
+}
+// incorrect
+public class Foo
+{
+  public int _field0;
+  internal int _field1;
+}
+```
 * Do use the sealed modifier to each classes, except a case when you are going to inherit a class from it exactly.
 * Do not use the Enam postfix for a name of an enum.
 ```csharp
