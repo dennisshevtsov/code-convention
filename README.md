@@ -91,7 +91,8 @@ class Foo
 }
 ```
 * Do add a doc comment for each public or internal class, method and property.
-* Do use one empty line between logical block. Do not use an empty line in an end of class, method etc.
+* Do use one empty line between logical block.
+* Do not use an empty line in an end of class, method etc.
 * Do use logical block #ifdef to configure code for an environment.
 * Do use logical block #region to group fields, properties, constructors etc. that have many lines that cannot be collapsed.
 * Do split usings to three logical blocks: microsoft, third-party, proj. Do sort usings alphabeticaly.
