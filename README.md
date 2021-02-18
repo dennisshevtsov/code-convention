@@ -6,7 +6,35 @@
 * Do not use this if is is not required.
 * Do use the sealed modifier to each classes, except a case when you are going to inherit a class from it exactly.
 * Do not use the Enam postfix for a name of an enum.
+```csharp
+//correct
+public enum Color
+{
+  White,
+  Red,
+}
+//incorrect
+public enum ColorEnum
+{
+  White,
+  Red,
+}
+```
 * Do use a single noun as a name of an enum.
+```csharp
+//correct
+public enum Color
+{
+  White,
+  Red,
+}
+//incorrect
+public enum Colors
+{
+  White,
+  Red,
+}
+```
 * Do use one file for one class, interface etc.
 * Do use access modifiers everytime. Do not hope a default access modifier value.
 ```csharp
