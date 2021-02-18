@@ -104,6 +104,28 @@ class Foo
 * Do use the order for members of a class. Costants, static members, fields, constructors, properties and methods. Public, internal, protected internal, protected and private.
 * Do use 2 spaces per a tab.
 * Do put the usings block inside a namespace block.
+```csharp
+// correct
+namespace Foo
+{
+  using System;
+
+  public class Boo
+  {
+    public Guid Id { get;set; }
+  }
+}
+// incorrect
+using System;
+
+namespace Foo
+{
+  public class Boo
+  {
+    public Guid Id { get;set; }
+  }
+}
+```
 * Do add the copyright block in a top of each file.
 * If a method contans more than 20 lines it is a occasion to refactor this method.
 * Do prefer using basic classes/interfaces instead concrete ones. IList instead List, IEnumerable instead IList.
