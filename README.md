@@ -3,16 +3,38 @@
 * Do add an empty line in an end of a file.
 * Do turn on showing white spaces (VS: ctrl+R, ctrl+W).
 * Do not use this if is is not required.
+```csharp
+// correct
+public class Foo
+{
+  private readonly int _boo;
+
+  public Foo(int boo)
+  {
+    _boo = boo;
+  }
+}
+// incorrect
+public class Foo
+{
+  private readonly int boo;
+
+  public Foo(int boo)
+  {
+    this.boo = boo;
+  }
+}
+```
 * Do use the sealed modifier to each classes, except a case when you are going to inherit a class from it exactly.
 * Do not use the Enam postfix for a name of an enum.
 ```csharp
-//correct
+// correct
 public enum Color
 {
   White = 0,
   Red = 1,
 }
-//incorrect
+// incorrect
 public enum ColorEnum
 {
   White = 0,
@@ -21,13 +43,13 @@ public enum ColorEnum
 ```
 * Do use a single noun as a name of an enum.
 ```csharp
-//correct
+// correct
 public enum Color
 {
   White = 0,
   Red = 1,
 }
-//incorrect
+// incorrect
 public enum Colors
 {
   White = 0,
@@ -36,13 +58,13 @@ public enum Colors
 ```
 * Do inherit an enum from *byte*, *int* etc. Prefer *byte*.
 ```csharp
-//correct
+// correct
 public enum Color : byte
 {
   White = 0,
   Red = 1,
 }
-//incorrect
+// incorrect
 public enum Color
 {
   White = 0,
@@ -51,7 +73,7 @@ public enum Color
 ```
 * Do assign a default value for an enum.
 ```csharp
-//correct
+// correct
 public enum Color : byte
 {
   White = 0,
@@ -63,7 +85,7 @@ public enum Pet : byte
   Cat = 1,
   Dog = 2,
 }
-//incorrect
+// incorrect
 public enum Color : byte
 {
   White,
@@ -78,12 +100,12 @@ public enum Pet : byte
 * Do use one file for one class, interface etc.
 * Do use access modifiers everytime. Do not hope a default access modifier value.
 ```csharp
-//correct
+// correct
 internal class Foo
 {
   private int _boo;
 }
-//incorrect
+// incorrect
 class Foo
 {
   int _boo;
