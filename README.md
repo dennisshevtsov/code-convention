@@ -10,14 +10,14 @@
 //correct
 public enum Color
 {
-  White,
-  Red,
+  White = 0,
+  Red = 1,
 }
 //incorrect
 public enum ColorEnum
 {
-  White,
-  Red,
+  White = 0,
+  Red = 1,
 }
 ```
 * Do use a single noun as a name of an enum.
@@ -25,14 +25,14 @@ public enum ColorEnum
 //correct
 public enum Color
 {
-  White,
-  Red,
+  White = 0,
+  Red = 1,
 }
 //incorrect
 public enum Colors
 {
-  White,
-  Red,
+  White = 0,
+  Red = 1,
 }
 ```
 * Do inherit an enum from *byte*, *int* etc. Prefer *byte*.
@@ -40,14 +40,40 @@ public enum Colors
 //correct
 public enum Color : byte
 {
-  White,
-  Red,
+  White = 0,
+  Red = 1,
 }
 //incorrect
 public enum Color
 {
+  White = 0,
+  Red = 1,
+}
+```
+* Do assign a default value for an enum.
+```csharp
+//correct
+public enum Color : byte
+{
+  White = 0,
+  Red = 1,
+}
+public enum Pet : byte
+{
+  None = 0,
+  Cat = 1,
+  Dog = 2,
+}
+//incorrect
+public enum Color : byte
+{
   White,
   Red,
+}
+public enum Pet : byte
+{
+  Cat = 1,
+  Dog = 2,
 }
 ```
 * Do use one file for one class, interface etc.
