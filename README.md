@@ -173,9 +173,33 @@ using Project.Core;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-
 ```
-* Do use comma after an enam value.
+* Do use a trailing comma.
+```csharp
+// correct
+public enum Color
+{
+  White = 0,
+  Red = 1,
+}
+
+var foo = new Foo
+{
+  Boo = 123,
+};
+
+// incorrect
+public enum Color
+{
+  White = 0,
+  Red = 1
+}
+
+var foo = new Foo
+{
+  Boo = 123
+};
+```
 * Do not keep any commented old code.
 * Do use one line for one attribute.
 ```csharp
