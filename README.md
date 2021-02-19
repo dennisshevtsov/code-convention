@@ -372,7 +372,7 @@ public sealed SampleDto
   public string Property { get; set; }
 }
 ```
-* Max length of name of file, class, method etc.
+* Do not create a class, a method etc. which name is long than 30 characters.
 * Do use braces for each *if*, *for* etc.
 * Do use the order for members of a class. First order by groups: costants, static members, fields, constructors, properties and methods. Then order in groups by modifier: public, internal, protected internal, protected and private.
 * Do use 2 spaces per a tab (VS: Tools->Text Editor->All Languages->Tabs).
