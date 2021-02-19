@@ -402,7 +402,7 @@ namespace Foo
 }
 ```
 * Do add the copyright block in a top of each file. For an example:
-* Do refactor a method if there are more than 20 lines in the method.
+* Do refactor a method if there are more than 25 lines in the method.
 * Do prefer using basic classes/interfaces instead concrete ones. *IList<T>* instead *List<T>*, *IEnumerable<T>* instead *IList<T>* etc.
 * Do prefer using arrays instead collections which have no max length.
 * Do use only extension methods to build LINQ chains.
