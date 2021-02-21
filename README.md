@@ -417,3 +417,4 @@ orders.Where(order => order.Enabled)
 where order.Enabled
 orderby order.Created).FirstOrDefault();
 ```
+* Do call a static member/constant with a class name.
