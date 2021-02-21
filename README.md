@@ -418,3 +418,4 @@ where order.Enabled
 orderby order.Created).FirstOrDefault();
 ```
 * Do call a static member/constant with a class name.
+* Do use postfix *Base* for an abstract class.
