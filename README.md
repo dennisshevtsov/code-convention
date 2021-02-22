@@ -418,6 +418,29 @@ where order.Enabled
 orderby order.Created).FirstOrDefault();
 ```
 * Do call a static member/constant with a class name.
+```csharp
+// correct
+public abstract class PageDtoBase
+{
+  private const int DefaultPageSize = 10;
+  private const int StartPage = 0;
+
+  public int PageSize { get; set; } = PageDtoBase.DefaultPageSize;
+
+  public int PageNo { get; set; } = PageDtoBase.StartPage;
+}
+
+// incorrect
+public abstract class PageDtoBase
+{
+  private const int DefaultPageSize = 10;
+  private const int StartPage = 0;
+
+  public int PageSize { get; set; } = DefaultPageSize;
+
+  public int PageNo { get; set; } = StartPage;
+}
+```
 * Do use postfix *Base* for an abstract class.
 ```csharp
 public abstract class DtoBase
