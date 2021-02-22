@@ -448,7 +448,7 @@ public abstract class DtoBase
   /// code
 }
 ```
-* Do use Camel case for a class, an interface, a property, a method, and a constant.
+* Do use Pascal case for a class, an interface, a property, a method, and a constant.
 ```csharp
 // correct
 public abstract class PageDtoBase
@@ -498,7 +498,7 @@ public interface Interface
   // code
 }
 ```
-* Do use Pascal case for a field, a parameter, and a variable.
+* Do use Camel case for a field, a parameter, and a variable.
 ```csharp
 // correct
 var abc = "abc";
@@ -530,7 +530,7 @@ public sealed class Sample
   }
 }
 ```
-* Do use Camel case for an acronym.
+* Do use Pascal case for an acronym.
 ```csharp
 // correct
 public sealed class DbOptions
