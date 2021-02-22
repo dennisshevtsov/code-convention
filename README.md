@@ -427,6 +427,37 @@ public abstract class DtoBase
 ```
 * Do use Camel case for a class, an interface, a property, a method, and a constant.
 * Do use Pascal case for a field, a parameter, and a variable.
+```csharp
+// correct
+var abc = "abc";
+var print = () => Console.WriteLine(abc);
+
+// incorrect
+var Abc = "abc";
+var Print = () => Console.WriteLine(abc);
+
+// correct
+public sealed class Sample
+{
+  private string _abc = "abc";
+
+  public void Print(string abc)
+  {
+    Console.WriteLine(abc);
+  }
+}
+
+// incorrect
+public sealed class Sample
+{
+  private string _Abc = "abc";
+
+  public void Print(string Abc)
+  {
+    Console.WriteLine(Abc);
+  }
+}
+```
 * Do use Camel case for an acronym.
 ```csharp
 // correct
