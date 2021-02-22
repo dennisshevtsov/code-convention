@@ -426,6 +426,20 @@ public abstract class DtoBase
 }
 ```
 * Do use Camel case for a class, an interface, a property, a method, and a constant.
+* Do user prefix *I* for an interface name.
+```csharp
+// correct
+public interface IInterface
+{
+  // code
+}
+
+// incorrect
+public interface Interface
+{
+  // code
+}
+```
 * Do use Pascal case for a field, a parameter, and a variable.
 ```csharp
 // correct
