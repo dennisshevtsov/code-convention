@@ -426,6 +426,41 @@ public abstract class DtoBase
 }
 ```
 * Do use Camel case for a class, an interface, a property, a method, and a constant.
+```csharp
+// correct
+public abstract class PageDtoBase
+{
+  private const int DefaultPageSize = 10;
+  private const int StartPage = 0;
+
+  public int PageSize { get; set; } = PageDtoBase.DefaultPageSize;
+
+  public int PageNo { get; set; } = PageDtoBase.StartPage;
+
+  public virtual void Clear()
+  {
+    PageSize = PageDtoBase.DefaultPageSize;
+    PageNo = PageDtoBase.StartPage;
+  }
+}
+
+// incorrect
+public abstract class PageDtoBase
+{
+  private const int _defaultPageSize = 10;
+  private const int START_PAGE = 0;
+
+  public int pageSize { get; set; } = PageDtoBase._defaultPageSize;
+
+  public int pageNo { get; set; } = PageDtoBase.START_PAGE;
+
+  public virtual void Clear()
+  {
+    pageSize = PageDtoBase._defaultPageSize;
+    pageNo = PageDtoBase.START_PAGE;
+  }
+}
+```
 * Do user prefix *I* for an interface name.
 ```csharp
 // correct
