@@ -342,7 +342,7 @@ var foo = new Foo
 * Do use one line for one attribute.
 ```csharp
 // correct
-public sealed SampleDto
+public sealed class SampleDto
 {
   [Required]
   [MaxLength(10)]
@@ -350,7 +350,7 @@ public sealed SampleDto
 }
 
 // incorrect
-public sealed SampleDto
+public sealed class SampleDto
 {
   [Required, MaxLength(10)]
   public string Property { get; set; }
@@ -359,14 +359,14 @@ public sealed SampleDto
 * Do not use full attribute name. Do use a full name only for attribute class definition.
 ```csharp
 // correct
-public sealed SampleDto
+public sealed class SampleDto
 {
   [Required]
   public string Property { get; set; }
 }
 
 // incorrect
-public sealed SampleDto
+public sealed class SampleDto
 {
   [RequiredAttribute]
   public string Property { get; set; }
@@ -420,7 +420,7 @@ orderby order.Created).FirstOrDefault();
 * Do call a static member/constant with a class name.
 * Do use postfix *Base* for an abstract class.
 ```csharp
-public abstract DtoBase
+public abstract class DtoBase
 {
   /// code
 }
@@ -430,13 +430,13 @@ public abstract DtoBase
 * Do use Camel case for an acronym.
 ```csharp
 // correct
-public sealed DbOptions
+public sealed class DbOptions
 {
   // code
 }
 
 // incorrect
-public sealed DBOptions
+public sealed class DBOptions
 {
   // code
 }
