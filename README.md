@@ -544,3 +544,31 @@ public sealed class DBOptions
   // code
 }
 ```
+* Do not use the CLR type names to define a type of a variable, a parameter, a field etc.
+```csharp
+// correct
+public sealed class Sample
+{
+  private readonly int _field;
+
+  public Sample(int field)
+  {
+    _field = field;
+  }
+
+  public int Field { get { return _field; } }
+}
+
+// incorrect
+public sealed class Sample
+{
+  private readonly Int32 _field;
+
+  public Sample(Int32 field)
+  {
+    _field = field;
+  }
+
+  public Int32 Field { get { return _field; } }
+}
+```
