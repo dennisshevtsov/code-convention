@@ -484,7 +484,7 @@ public abstract class PageDtoBase
   }
 }
 ```
-* Do user prefix *I* for an interface name.
+* Do prefix an interface with letter I.
 ```csharp
 // correct
 public interface IInterface
