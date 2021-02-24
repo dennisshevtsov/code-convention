@@ -178,6 +178,17 @@ public sealed class SampelService
   // Code.
 }
 ```
+* Do use a sample below for a comment of a constructor.
+```csharp
+public sealed class Sample
+{
+  /// <summary>Initializes a new instance of the <see cref="Sample"/> class.</summary>
+  public Sample()
+  {
+    // Code.
+  }
+}
+```
 * Do add an empty line between properties, methods, and constructors.
 ```csharp
 // Correct.
