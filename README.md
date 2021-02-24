@@ -191,6 +191,7 @@ public sealed class Sample
 ```
 * Do start a comment for a property with *Gets a value that represents*, *Gets/sets a value that represents* or *Gets or sets a value that represents*.
 ```csharp
+/// <summary>Represents a base of an entity.</summary>
 public abstract class EntityBase
 {
   /// <summary>Gets/set a value that represents an ID of an entity.</summary>
