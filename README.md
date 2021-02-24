@@ -161,7 +161,7 @@ public sealed class SampleService
     ISampleRepository2 sampleRepository2,
     HttpClient httpClient)
   {
-    // code
+    // Code.
   }
 
   public int Property0 { get;set; }
@@ -181,7 +181,7 @@ public sealed class SampleService
     ISampleRepository2 sampleRepository2,
     HttpClient httpClient)
   {
-    // code
+    // Code.
   }
 
   public int Property0 { get;set; }
@@ -235,12 +235,12 @@ public sealed class SampleClass
 
   public void Method0()
   {
-    // code
+    // Code.
   }
 
   public void Method1()
   {
-    // code
+    // Code.
   }
 }
 
@@ -257,12 +257,12 @@ public sealed class SampleClass
 
   public void Method0()
   {
-    // code
+    // Code.
   }
 
   public void Method1()
   {
-    // code
+    // Code.
   }
 
 }
@@ -284,7 +284,7 @@ public sealed class SampleService
     ISampleRepository3 sampleRepository3
     ISampleRepository4 sampleRepository4)
     {
-      // code
+      // Code.
     }
 
   #endregion
@@ -445,7 +445,7 @@ public abstract class PageDtoBase
 ```csharp
 public abstract class DtoBase
 {
-  /// code
+  /// Code.
 }
 ```
 * Do use Pascal case for a class, an interface, a property, a method, and a constant.
@@ -489,13 +489,13 @@ public abstract class PageDtoBase
 // Correct.
 public interface IInterface
 {
-  // code
+  // Code.
 }
 
 // Incorrect.
 public interface Interface
 {
-  // code
+  // Code.
 }
 ```
 * Do use Camel case for a field, a parameter, and a variable.
@@ -535,13 +535,13 @@ public sealed class Sample
 // Correct.
 public sealed class DbOptions
 {
-  // code
+  // Code.
 }
 
 // Incorrect.
 public sealed class DBOptions
 {
-  // code
+  // Code.
 }
 ```
 * Do not use the CLR type names to define a type of a variable, a parameter, a field etc.
