@@ -580,3 +580,4 @@ public sealed class Sample
 // It is a first line of a right comment.
 // It is a second line of a right comment.
 ```
+* Do favour a valuable LINQ parameter name over a short one.
