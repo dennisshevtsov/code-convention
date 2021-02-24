@@ -147,7 +147,37 @@ class Foo
   int _boo;
 }
 ```
-* Do add a doc comment for each public class, method, and property.
+* Do add a doc comment for each public class, constructor, method, and property.
+* Do start a doc comment for a class, method, and property with a third person singular present verb.
+```csharp
+// Correct.
+/// <summary>Provides a simple API.</summary>
+public sealed class SampelService
+{
+  // Code.
+}
+
+// Incorrect.
+/// <summary>Provide a simple API.</summary>
+public sealed class SampelService
+{
+  // Code.
+}
+
+// Incorrect.
+/// <summary>A class that provides a simple API.</summary>
+public sealed class SampelService
+{
+  // Code.
+}
+
+// Incorrect.
+/// <summary>An object that provides a simple API.</summary>
+public sealed class SampelService
+{
+  // Code.
+}
+```
 * Do add an empty line between properties, methods, and constructors.
 ```csharp
 // Correct.
