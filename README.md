@@ -4,7 +4,7 @@
 * Do turn on showing white spaces (VS: ctrl+R, ctrl+W).
 * Do not use this if is is not required.
 ```csharp
-// correct
+// Correct.
 public class Foo
 {
   private readonly int _boo;
@@ -15,7 +15,7 @@ public class Foo
   }
 }
 
-// incorrect
+// Incorrect.
 public class Foo
 {
   private readonly int boo;
@@ -28,13 +28,13 @@ public class Foo
 ```
 * Do use prefix _ for a field.
 ```csharp
-// correct
+// Correct.
 public class Foo
 {
   private readonly int _boo;
 }
 
-// incorrect
+// Incorrect.
 public class Foo
 {
   private readonly int boo;
@@ -42,14 +42,14 @@ public class Foo
 ```
 * Do not use *public* or *internal* fields.
 ```csharp
-// correct
+// Correct.
 public class Foo
 {
   private int _field0;
   protected int _field1;
 }
 
-// incorrect
+// Incorrect.
 public class Foo
 {
   public int _field0;
@@ -59,14 +59,14 @@ public class Foo
 * Do use the *sealed* modifier to each classes, except a case when you are going to inherit a class from it exactly.
 * Do not use the Enam postfix for a name of an enum.
 ```csharp
-// correct
+// Correct.
 public enum Color
 {
   White = 0,
   Red = 1,
 }
 
-// incorrect
+// Incorrect.
 public enum ColorEnum
 {
   White = 0,
@@ -75,14 +75,14 @@ public enum ColorEnum
 ```
 * Do use a single noun as a name of an enum.
 ```csharp
-// correct
+// Correct.
 public enum Color
 {
   White = 0,
   Red = 1,
 }
 
-// incorrect
+// Incorrect.
 public enum Colors
 {
   White = 0,
@@ -91,14 +91,14 @@ public enum Colors
 ```
 * Do inherit an enum from *byte*, *int* etc. Prefer *byte*.
 ```csharp
-// correct
+// Correct.
 public enum Color : byte
 {
   White = 0,
   Red = 1,
 }
 
-// incorrect
+// Incorrect.
 public enum Color
 {
   White = 0,
@@ -107,7 +107,7 @@ public enum Color
 ```
 * Do assign a default value for an enum.
 ```csharp
-// correct
+// Correct.
 public enum Color : byte
 {
   White = 0,
@@ -120,7 +120,7 @@ public enum Pet : byte
   Dog = 2,
 }
 
-// incorrect
+// Incorrect.
 public enum Color : byte
 {
   White,
@@ -135,13 +135,13 @@ public enum Pet : byte
 * Do use one file for one class, interface etc.
 * Do use access modifiers everytime. Do not hope a default access modifier value.
 ```csharp
-// correct
+// Correct.
 internal class Foo
 {
   private int _boo;
 }
 
-// incorrect
+// Incorrect.
 class Foo
 {
   int _boo;
@@ -150,7 +150,7 @@ class Foo
 * Do add a doc comment for each public or internal class, method and property.
 * Do add an empty line between properties, methods, and constructors.
 ```csharp
-// correct
+// Correct.
 public sealed class SampleService
 {
   public SampleService() {}
@@ -171,7 +171,7 @@ public sealed class SampleService
   public void Method() {}
 }
 
-// incorrect
+// Incorrect.
 public sealed class SampleService
 {
   public SampleService() {}
@@ -191,7 +191,7 @@ public sealed class SampleService
 ```
 * Do add an empty line between groupes of fields only.
 ```csharp
-// correct
+// Correct.
 public sealed class SampleService
 {
   private readonly ISampleRepository0 _sampleRepository0;
@@ -201,7 +201,7 @@ public sealed class SampleService
   private readonly HttpClient _httpClient;
 }
 
-// correct too
+// Correct. too
 public sealed class SampleService
 {
   private readonly ISampleRepository0 _sampleRepository0;
@@ -210,7 +210,7 @@ public sealed class SampleService
   private readonly HttpClient _httpClient;
 }
 
-// incorrect
+// Incorrect.
 public sealed class SampleService
 {
   private readonly ISampleRepository0 _sampleRepository0;
@@ -224,7 +224,7 @@ public sealed class SampleService
 ```
 * Do not use an empty line in an end or a start of class, method etc.
 ```csharp
-// correct
+// Correct.
 public sealed class SampleClass
 {
   public void Method()
@@ -244,7 +244,7 @@ public sealed class SampleClass
   }
 }
 
-// incorrect
+// Incorrect.
 public sealed class SampleClass
 {
   public void Method()
@@ -292,7 +292,7 @@ public sealed class SampleService
 ```
 * Do split usings to three logical blocks: microsoft, third-party, proj. Do sort usings alphabeticaly in a block.
 ```csharp
-// correct
+// Correct.
 using System;
 using System.Threading;
 using System.Threading.Tasks;
@@ -303,7 +303,7 @@ using Microsoft.AspNetCore.Mvc;
 using Project;
 using Project.Core;
 
-// incorrect
+// Incorrect.
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Project;
@@ -314,7 +314,7 @@ using System.Threading.Tasks;
 ```
 * Do use a trailing comma.
 ```csharp
-// correct
+// Correct.
 public enum Color
 {
   White = 0,
@@ -326,7 +326,7 @@ var foo = new Foo
   Boo = 123,
 };
 
-// incorrect
+// Incorrect.
 public enum Color
 {
   White = 0,
@@ -341,7 +341,7 @@ var foo = new Foo
 * Do not keep any commented out code.
 * Do use one line for one attribute.
 ```csharp
-// correct
+// Correct.
 public sealed class SampleDto
 {
   [Required]
@@ -349,7 +349,7 @@ public sealed class SampleDto
   public string Property { get; set; }
 }
 
-// incorrect
+// Incorrect.
 public sealed class SampleDto
 {
   [Required, MaxLength(10)]
@@ -358,14 +358,14 @@ public sealed class SampleDto
 ```
 * Do not use full attribute name. Do use a full name only for attribute class definition.
 ```csharp
-// correct
+// Correct.
 public sealed class SampleDto
 {
   [Required]
   public string Property { get; set; }
 }
 
-// incorrect
+// Incorrect.
 public sealed class SampleDto
 {
   [RequiredAttribute]
@@ -379,7 +379,7 @@ public sealed class SampleDto
 * Do use 2 spaces per a tab (VS: Tools->Text Editor->All Languages->Tabs).
 * Do put the usings block inside a namespace block.
 ```csharp
-// correct
+// Correct.
 namespace Foo
 {
   using System;
@@ -390,7 +390,7 @@ namespace Foo
   }
 }
 
-// incorrect
+// Incorrect.
 using System;
 
 namespace Foo
@@ -407,19 +407,19 @@ namespace Foo
 * Do prefer using arrays instead collections which have no max length.
 * Do use only extension methods to build LINQ chains.
 ```csharp
-// correct
+// Correct.
 orders.Where(order => order.Enabled)
       .OrderBy(order => order.Created)
       .FirstOrDefault();
 
-// incorrect
+// Incorrect.
 (from order in orders
 where order.Enabled
 orderby order.Created).FirstOrDefault();
 ```
 * Do call a static member/constant with a class name.
 ```csharp
-// correct
+// Correct.
 public abstract class PageDtoBase
 {
   private const int DefaultPageSize = 10;
@@ -430,7 +430,7 @@ public abstract class PageDtoBase
   public int PageNo { get; set; } = PageDtoBase.StartPage;
 }
 
-// incorrect
+// Incorrect.
 public abstract class PageDtoBase
 {
   private const int DefaultPageSize = 10;
@@ -450,7 +450,7 @@ public abstract class DtoBase
 ```
 * Do use Pascal case for a class, an interface, a property, a method, and a constant.
 ```csharp
-// correct
+// Correct.
 public abstract class PageDtoBase
 {
   private const int DefaultPageSize = 10;
@@ -467,7 +467,7 @@ public abstract class PageDtoBase
   }
 }
 
-// incorrect
+// Incorrect.
 public abstract class PageDtoBase
 {
   private const int _defaultPageSize = 10;
@@ -486,13 +486,13 @@ public abstract class PageDtoBase
 ```
 * Do prefix an interface with letter I.
 ```csharp
-// correct
+// Correct.
 public interface IInterface
 {
   // code
 }
 
-// incorrect
+// Incorrect.
 public interface Interface
 {
   // code
@@ -500,15 +500,15 @@ public interface Interface
 ```
 * Do use Camel case for a field, a parameter, and a variable.
 ```csharp
-// correct
+// Correct.
 var abc = "abc";
 var print = () => Console.WriteLine(abc);
 
-// incorrect
+// Incorrect.
 var Abc = "abc";
 var Print = () => Console.WriteLine(abc);
 
-// correct
+// Correct.
 public sealed class Sample
 {
   private string _abc = "abc";
@@ -519,7 +519,7 @@ public sealed class Sample
   }
 }
 
-// incorrect
+// Incorrect.
 public sealed class Sample
 {
   private string _Abc = "abc";
@@ -532,13 +532,13 @@ public sealed class Sample
 ```
 * Do use Pascal case for an acronym.
 ```csharp
-// correct
+// Correct.
 public sealed class DbOptions
 {
   // code
 }
 
-// incorrect
+// Incorrect.
 public sealed class DBOptions
 {
   // code
@@ -546,7 +546,7 @@ public sealed class DBOptions
 ```
 * Do not use the CLR type names to define a type of a variable, a parameter, a field etc.
 ```csharp
-// correct
+// Correct.
 public sealed class Sample
 {
   private readonly int _field;
@@ -559,7 +559,7 @@ public sealed class Sample
   public int Field { get { return _field; } }
 }
 
-// incorrect
+// Incorrect.
 public sealed class Sample
 {
   private readonly Int32 _field;
