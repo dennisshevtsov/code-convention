@@ -147,7 +147,7 @@ class Foo
   int _boo;
 }
 ```
-* Do add a doc comment for each public or internal class, method and property.
+* Do add a doc comment for each public class, method, and property.
 * Do add an empty line between properties, methods, and constructors.
 ```csharp
 // Correct.
