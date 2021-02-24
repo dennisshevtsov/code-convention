@@ -572,3 +572,4 @@ public sealed class Sample
   public Int32 Field { get { return _field; } }
 }
 ```
+* Do start a comment at a new line, not at the end of a line of code.
