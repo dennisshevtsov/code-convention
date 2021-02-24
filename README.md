@@ -573,3 +573,4 @@ public sealed class Sample
 }
 ```
 * Do start a comment at a new line, not at the end of a line of code.
+* Do start a comment with an uppercase letter.
