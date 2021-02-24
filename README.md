@@ -581,3 +581,14 @@ public sealed class Sample
 // It is a second line of a right comment.
 ```
 * Do favour a valuable LINQ parameter name over a short one.
+```csharp
+// Correct.
+var order = orders.Where(order => order.Enabled)
+                  .OrderBy(order => order.Created)
+                  .FirstOrDefault();
+
+// Incorrect.
+var order = orders.Where(x => x.Enabled)
+                  .OrderBy(x => x.Created)
+                  .FirstOrDefault();
+```
