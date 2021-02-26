@@ -222,6 +222,32 @@ public sealed class SampleDto
 }
 ```
 
+## LINQ
+* Do use only extension methods to build LINQ chains.
+```csharp
+// Correct.
+orders.Where(order => order.Enabled)
+      .OrderBy(order => order.Created)
+      .FirstOrDefault();
+
+// Incorrect.
+(from order in orders
+where order.Enabled
+orderby order.Created).FirstOrDefault();
+```
+* Do favour a valuable LINQ parameter name over a short one.
+```csharp
+// Correct.
+var order = orders.Where(order => order.Enabled)
+                  .OrderBy(order => order.Created)
+                  .FirstOrDefault();
+
+// Incorrect.
+var order = orders.Where(x => x.Enabled)
+                  .OrderBy(x => x.Created)
+                  .FirstOrDefault();
+```
+
 ## Other
 
 * Do add an empty line in an end of a file.
@@ -595,18 +621,6 @@ namespace Foo
 * Do refactor a method if there are more than 25 lines in the method.
 * Do prefer using basic classes/interfaces instead concrete ones. *IList<T>* instead *List<T>*, *IEnumerable<T>* instead *IList<T>* etc.
 * Do prefer using arrays instead collections which have no max length.
-* Do use only extension methods to build LINQ chains.
-```csharp
-// Correct.
-orders.Where(order => order.Enabled)
-      .OrderBy(order => order.Created)
-      .FirstOrDefault();
-
-// Incorrect.
-(from order in orders
-where order.Enabled
-orderby order.Created).FirstOrDefault();
-```
 * Do call a static member/constant with a class name.
 ```csharp
 // Correct.
@@ -639,15 +653,3 @@ public abstract class DtoBase
 }
 ```
 
-* Do favour a valuable LINQ parameter name over a short one.
-```csharp
-// Correct.
-var order = orders.Where(order => order.Enabled)
-                  .OrderBy(order => order.Created)
-                  .FirstOrDefault();
-
-// Incorrect.
-var order = orders.Where(x => x.Enabled)
-                  .OrderBy(x => x.Created)
-                  .FirstOrDefault();
-```
