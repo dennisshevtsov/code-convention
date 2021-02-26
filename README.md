@@ -305,7 +305,7 @@ public sealed class SampleService
   private readonly HttpClient _httpClient;
 }
 
-// Correct. too
+// Correct too.
 public sealed class SampleService
 {
   private readonly ISampleRepository0 _sampleRepository0;
