@@ -1,5 +1,131 @@
 # C# Code Convension
 
+## Naming
+* Do use Pascal case for a class, an interface, a property, a method, and a constant.
+```csharp
+// Correct.
+public abstract class PageDtoBase
+{
+  private const int DefaultPageSize = 10;
+  private const int StartPage = 0;
+
+  public int PageSize { get; set; } = PageDtoBase.DefaultPageSize;
+
+  public int PageNo { get; set; } = PageDtoBase.StartPage;
+
+  public virtual void Clear()
+  {
+    PageSize = PageDtoBase.DefaultPageSize;
+    PageNo = PageDtoBase.StartPage;
+  }
+}
+
+// Incorrect.
+public abstract class PageDtoBase
+{
+  private const int _defaultPageSize = 10;
+  private const int START_PAGE = 0;
+
+  public int pageSize { get; set; } = PageDtoBase._defaultPageSize;
+
+  public int pageNo { get; set; } = PageDtoBase.START_PAGE;
+
+  public virtual void Clear()
+  {
+    pageSize = PageDtoBase._defaultPageSize;
+    pageNo = PageDtoBase.START_PAGE;
+  }
+}
+```
+* Do prefix an interface with letter I.
+```csharp
+// Correct.
+public interface IInterface
+{
+  // Code.
+}
+
+// Incorrect.
+public interface Interface
+{
+  // Code.
+}
+```
+* Do use Camel case for a field, a parameter, and a variable.
+```csharp
+// Correct.
+var abc = "abc";
+var print = () => Console.WriteLine(abc);
+
+// Incorrect.
+var Abc = "abc";
+var Print = () => Console.WriteLine(abc);
+
+// Correct.
+public sealed class Sample
+{
+  private string _abc = "abc";
+
+  public void Print(string abc)
+  {
+    Console.WriteLine(abc);
+  }
+}
+
+// Incorrect.
+public sealed class Sample
+{
+  private string _Abc = "abc";
+
+  public void Print(string Abc)
+  {
+    Console.WriteLine(Abc);
+  }
+}
+```
+* Do use Pascal case for an acronym.
+```csharp
+// Correct.
+public sealed class DbOptions
+{
+  // Code.
+}
+
+// Incorrect.
+public sealed class DBOptions
+{
+  // Code.
+}
+```
+* Do not use the CLR type names to define a type of a variable, a parameter, a field etc.
+```csharp
+// Correct.
+public sealed class Sample
+{
+  private readonly int _field;
+
+  public Sample(int field)
+  {
+    _field = field;
+  }
+
+  public int Field { get { return _field; } }
+}
+
+// Incorrect.
+public sealed class Sample
+{
+  private readonly Int32 _field;
+
+  public Sample(Int32 field)
+  {
+    _field = field;
+  }
+
+  public Int32 Field { get { return _field; } }
+}
+```
+
 ## Comments
 * Do start a comment at a new line, not at the end of a line of code.
 * Do start a comment with an uppercase letter.
@@ -60,6 +186,8 @@ public abstract class EntityBase
   public Guid Id { get; set; }
 }
 ```
+
+## Other
 
 * Do add an empty line in an end of a file.
 * Do turn on showing white spaces (VS: ctrl+R, ctrl+W).
@@ -508,130 +636,7 @@ public abstract class DtoBase
   /// Code.
 }
 ```
-* Do use Pascal case for a class, an interface, a property, a method, and a constant.
-```csharp
-// Correct.
-public abstract class PageDtoBase
-{
-  private const int DefaultPageSize = 10;
-  private const int StartPage = 0;
 
-  public int PageSize { get; set; } = PageDtoBase.DefaultPageSize;
-
-  public int PageNo { get; set; } = PageDtoBase.StartPage;
-
-  public virtual void Clear()
-  {
-    PageSize = PageDtoBase.DefaultPageSize;
-    PageNo = PageDtoBase.StartPage;
-  }
-}
-
-// Incorrect.
-public abstract class PageDtoBase
-{
-  private const int _defaultPageSize = 10;
-  private const int START_PAGE = 0;
-
-  public int pageSize { get; set; } = PageDtoBase._defaultPageSize;
-
-  public int pageNo { get; set; } = PageDtoBase.START_PAGE;
-
-  public virtual void Clear()
-  {
-    pageSize = PageDtoBase._defaultPageSize;
-    pageNo = PageDtoBase.START_PAGE;
-  }
-}
-```
-* Do prefix an interface with letter I.
-```csharp
-// Correct.
-public interface IInterface
-{
-  // Code.
-}
-
-// Incorrect.
-public interface Interface
-{
-  // Code.
-}
-```
-* Do use Camel case for a field, a parameter, and a variable.
-```csharp
-// Correct.
-var abc = "abc";
-var print = () => Console.WriteLine(abc);
-
-// Incorrect.
-var Abc = "abc";
-var Print = () => Console.WriteLine(abc);
-
-// Correct.
-public sealed class Sample
-{
-  private string _abc = "abc";
-
-  public void Print(string abc)
-  {
-    Console.WriteLine(abc);
-  }
-}
-
-// Incorrect.
-public sealed class Sample
-{
-  private string _Abc = "abc";
-
-  public void Print(string Abc)
-  {
-    Console.WriteLine(Abc);
-  }
-}
-```
-* Do use Pascal case for an acronym.
-```csharp
-// Correct.
-public sealed class DbOptions
-{
-  // Code.
-}
-
-// Incorrect.
-public sealed class DBOptions
-{
-  // Code.
-}
-```
-* Do not use the CLR type names to define a type of a variable, a parameter, a field etc.
-```csharp
-// Correct.
-public sealed class Sample
-{
-  private readonly int _field;
-
-  public Sample(int field)
-  {
-    _field = field;
-  }
-
-  public int Field { get { return _field; } }
-}
-
-// Incorrect.
-public sealed class Sample
-{
-  private readonly Int32 _field;
-
-  public Sample(Int32 field)
-  {
-    _field = field;
-  }
-
-  public Int32 Field { get { return _field; } }
-}
-```
 * Do favour a valuable LINQ parameter name over a short one.
 ```csharp
 // Correct.
