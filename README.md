@@ -187,6 +187,41 @@ public abstract class EntityBase
 }
 ```
 
+# Attributes
+* Do use one line for one attribute.
+```csharp
+// Correct.
+public sealed class SampleDto
+{
+  [Required]
+  [MaxLength(10)]
+  public string Property { get; set; }
+}
+
+// Incorrect.
+public sealed class SampleDto
+{
+  [Required, MaxLength(10)]
+  public string Property { get; set; }
+}
+```
+* Do not use full attribute name. Do use a full name only for attribute class definition.
+```csharp
+// Correct.
+public sealed class SampleDto
+{
+  [Required]
+  public string Property { get; set; }
+}
+
+// Incorrect.
+public sealed class SampleDto
+{
+  [RequiredAttribute]
+  public string Property { get; set; }
+}
+```
+
 ## Other
 
 * Do add an empty line in an end of a file.
@@ -527,39 +562,6 @@ var foo = new Foo
 };
 ```
 * Do not keep any commented out code.
-* Do use one line for one attribute.
-```csharp
-// Correct.
-public sealed class SampleDto
-{
-  [Required]
-  [MaxLength(10)]
-  public string Property { get; set; }
-}
-
-// Incorrect.
-public sealed class SampleDto
-{
-  [Required, MaxLength(10)]
-  public string Property { get; set; }
-}
-```
-* Do not use full attribute name. Do use a full name only for attribute class definition.
-```csharp
-// Correct.
-public sealed class SampleDto
-{
-  [Required]
-  public string Property { get; set; }
-}
-
-// Incorrect.
-public sealed class SampleDto
-{
-  [RequiredAttribute]
-  public string Property { get; set; }
-}
-```
 * Do not create a class, a method etc. which name is long than 30 characters.
 * Do name a file the same as a class, an interface etc. in the file.
 * Do use braces for each *if*, *for* etc.
