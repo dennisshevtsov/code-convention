@@ -1,5 +1,66 @@
 # C# Code Convension
 
+## Comments
+* Do add a doc comment for each public class, constructor, method, and property.
+* Do start a doc comment for a class, method, and property with a third person singular present verb.
+```csharp
+// Correct.
+/// <summary>Provides a simple API.</summary>
+public sealed class SampelService
+{
+  // Code.
+}
+
+// Incorrect.
+/// <summary>Provide a simple API.</summary>
+public sealed class SampelService
+{
+  // Code.
+}
+
+// Incorrect.
+/// <summary>A class that provides a simple API.</summary>
+public sealed class SampelService
+{
+  // Code.
+}
+
+// Incorrect.
+/// <summary>An object that provides a simple API.</summary>
+public sealed class SampelService
+{
+  // Code.
+}
+```
+* Do use a sample below for a comment of a constructor.
+```csharp
+public sealed class Sample
+{
+  /// <summary>Initializes a new instance of the <see cref="Sample"/> class.</summary>
+  public Sample()
+  {
+    // Code.
+  }
+}
+```
+* Do start a comment for a property with *Gets a value that represents*, *Gets/sets a value that represents* or *Gets or sets a value that represents*.
+```csharp
+/// <summary>Represents a base of an entity.</summary>
+public abstract class EntityBase
+{
+  /// <summary>Gets/set a value that represents an ID of an entity.</summary>
+  public Guid Id { get; set; }
+}
+```
+* Do start a comment at a new line, not at the end of a line of code.
+* Do start a comment with an uppercase letter.
+* Do end a comment with a period.
+* Do add one space between delimiter *//* and a text.
+```csharp
+// It is a first line of a right comment.
+// It is a second line of a right comment.
+```
+
 * Do add an empty line in an end of a file.
 * Do turn on showing white spaces (VS: ctrl+R, ctrl+W).
 * Do not use this if is is not required.
@@ -145,57 +206,6 @@ internal class Foo
 class Foo
 {
   int _boo;
-}
-```
-* Do add a doc comment for each public class, constructor, method, and property.
-* Do start a doc comment for a class, method, and property with a third person singular present verb.
-```csharp
-// Correct.
-/// <summary>Provides a simple API.</summary>
-public sealed class SampelService
-{
-  // Code.
-}
-
-// Incorrect.
-/// <summary>Provide a simple API.</summary>
-public sealed class SampelService
-{
-  // Code.
-}
-
-// Incorrect.
-/// <summary>A class that provides a simple API.</summary>
-public sealed class SampelService
-{
-  // Code.
-}
-
-// Incorrect.
-/// <summary>An object that provides a simple API.</summary>
-public sealed class SampelService
-{
-  // Code.
-}
-```
-* Do use a sample below for a comment of a constructor.
-```csharp
-public sealed class Sample
-{
-  /// <summary>Initializes a new instance of the <see cref="Sample"/> class.</summary>
-  public Sample()
-  {
-    // Code.
-  }
-}
-```
-* Do start a comment for a property with *Gets a value that represents*, *Gets/sets a value that represents* or *Gets or sets a value that represents*.
-```csharp
-/// <summary>Represents a base of an entity.</summary>
-public abstract class EntityBase
-{
-  /// <summary>Gets/set a value that represents an ID of an entity.</summary>
-  public Guid Id { get; set; }
 }
 ```
 * Do add an empty line between properties, methods, and constructors.
@@ -621,14 +631,6 @@ public sealed class Sample
 
   public Int32 Field { get { return _field; } }
 }
-```
-* Do start a comment at a new line, not at the end of a line of code.
-* Do start a comment with an uppercase letter.
-* Do end a comment with a period.
-* Do add one space between delimiter *//* and a text.
-```csharp
-// It is a first line of a right comment.
-// It is a second line of a right comment.
 ```
 * Do favour a valuable LINQ parameter name over a short one.
 ```csharp
