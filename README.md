@@ -248,155 +248,10 @@ var order = orders.Where(x => x.Enabled)
                   .FirstOrDefault();
 ```
 
-## Other
+# Formatting
 
 * Do add an empty line in an end of a file.
 * Do turn on showing white spaces (VS: ctrl+R, ctrl+W).
-* Do not use this if is is not required.
-```csharp
-// Correct.
-public class Foo
-{
-  private readonly int _boo;
-
-  public Foo(int boo)
-  {
-    _boo = boo;
-  }
-}
-
-// Incorrect.
-public class Foo
-{
-  private readonly int boo;
-
-  public Foo(int boo)
-  {
-    this.boo = boo;
-  }
-}
-```
-* Do use prefix _ for a field.
-```csharp
-// Correct.
-public class Foo
-{
-  private readonly int _boo;
-}
-
-// Incorrect.
-public class Foo
-{
-  private readonly int boo;
-}
-```
-* Do not use *public* or *internal* fields.
-```csharp
-// Correct.
-public class Foo
-{
-  private int _field0;
-  protected int _field1;
-}
-
-// Incorrect.
-public class Foo
-{
-  public int _field0;
-  internal int _field1;
-}
-```
-* Do use the *sealed* modifier to each classes, except a case when you are going to inherit a class from it exactly.
-* Do not use the Enam postfix for a name of an enum.
-```csharp
-// Correct.
-public enum Color
-{
-  White = 0,
-  Red = 1,
-}
-
-// Incorrect.
-public enum ColorEnum
-{
-  White = 0,
-  Red = 1,
-}
-```
-* Do use a single noun as a name of an enum.
-```csharp
-// Correct.
-public enum Color
-{
-  White = 0,
-  Red = 1,
-}
-
-// Incorrect.
-public enum Colors
-{
-  White = 0,
-  Red = 1,
-}
-```
-* Do inherit an enum from *byte*, *int* etc. Prefer *byte*.
-```csharp
-// Correct.
-public enum Color : byte
-{
-  White = 0,
-  Red = 1,
-}
-
-// Incorrect.
-public enum Color
-{
-  White = 0,
-  Red = 1,
-}
-```
-* Do assign a default value for an enum.
-```csharp
-// Correct.
-public enum Color : byte
-{
-  White = 0,
-  Red = 1,
-}
-public enum Pet : byte
-{
-  None = 0,
-  Cat = 1,
-  Dog = 2,
-}
-
-// Incorrect.
-public enum Color : byte
-{
-  White,
-  Red,
-}
-public enum Pet : byte
-{
-  Cat = 1,
-  Dog = 2,
-}
-```
-* Do use one file for one class, interface etc.
-* Do use access modifiers everytime. Do not hope a default access modifier value.
-```csharp
-// Correct.
-internal class Foo
-{
-  private int _boo;
-}
-
-// Incorrect.
-class Foo
-{
-  int _boo;
-}
-```
 * Do add an empty line between properties, methods, and constructors.
 ```csharp
 // Correct.
@@ -588,8 +443,6 @@ var foo = new Foo
 };
 ```
 * Do not keep any commented out code.
-* Do not create a class, a method etc. which name is long than 30 characters.
-* Do name a file the same as a class, an interface etc. in the file.
 * Do use braces for each *if*, *for* etc.
 * Do use the order for members of a class. First order by groups: costants, static members, fields, constructors, properties and methods. Then order in groups by modifier: public, internal, protected internal, protected and private.
 * Do use 2 spaces per a tab (VS: Tools->Text Editor->All Languages->Tabs).
@@ -618,6 +471,156 @@ namespace Foo
 }
 ```
 * Do add the copyright block in a top of each file. For an example:
+
+## Other
+
+* Do not use this if is is not required.
+```csharp
+// Correct.
+public class Foo
+{
+  private readonly int _boo;
+
+  public Foo(int boo)
+  {
+    _boo = boo;
+  }
+}
+
+// Incorrect.
+public class Foo
+{
+  private readonly int boo;
+
+  public Foo(int boo)
+  {
+    this.boo = boo;
+  }
+}
+```
+* Do use prefix _ for a field.
+```csharp
+// Correct.
+public class Foo
+{
+  private readonly int _boo;
+}
+
+// Incorrect.
+public class Foo
+{
+  private readonly int boo;
+}
+```
+* Do not use *public* or *internal* fields.
+```csharp
+// Correct.
+public class Foo
+{
+  private int _field0;
+  protected int _field1;
+}
+
+// Incorrect.
+public class Foo
+{
+  public int _field0;
+  internal int _field1;
+}
+```
+* Do use the *sealed* modifier to each classes, except a case when you are going to inherit a class from it exactly.
+* Do not use the Enam postfix for a name of an enum.
+```csharp
+// Correct.
+public enum Color
+{
+  White = 0,
+  Red = 1,
+}
+
+// Incorrect.
+public enum ColorEnum
+{
+  White = 0,
+  Red = 1,
+}
+```
+* Do use a single noun as a name of an enum.
+```csharp
+// Correct.
+public enum Color
+{
+  White = 0,
+  Red = 1,
+}
+
+// Incorrect.
+public enum Colors
+{
+  White = 0,
+  Red = 1,
+}
+```
+* Do inherit an enum from *byte*, *int* etc. Prefer *byte*.
+```csharp
+// Correct.
+public enum Color : byte
+{
+  White = 0,
+  Red = 1,
+}
+
+// Incorrect.
+public enum Color
+{
+  White = 0,
+  Red = 1,
+}
+```
+* Do assign a default value for an enum.
+```csharp
+// Correct.
+public enum Color : byte
+{
+  White = 0,
+  Red = 1,
+}
+public enum Pet : byte
+{
+  None = 0,
+  Cat = 1,
+  Dog = 2,
+}
+
+// Incorrect.
+public enum Color : byte
+{
+  White,
+  Red,
+}
+public enum Pet : byte
+{
+  Cat = 1,
+  Dog = 2,
+}
+```
+* Do use one file for one class, interface etc.
+* Do use access modifiers everytime. Do not hope a default access modifier value.
+```csharp
+// Correct.
+internal class Foo
+{
+  private int _boo;
+}
+
+// Incorrect.
+class Foo
+{
+  int _boo;
+}
+```
+* Do not create a class, a method etc. which name is long than 30 characters.
+* Do name a file the same as a class, an interface etc. in the file.
 * Do refactor a method if there are more than 25 lines in the method.
 * Do prefer using basic classes/interfaces instead concrete ones. *IList<T>* instead *List<T>*, *IEnumerable<T>* instead *IList<T>* etc.
 * Do prefer using arrays instead collections which have no max length.
@@ -652,4 +655,3 @@ public abstract class DtoBase
   /// Code.
 }
 ```
-
