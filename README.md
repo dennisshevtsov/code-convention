@@ -1,6 +1,14 @@
 # C# Code Convension
 
 ## Comments
+* Do start a comment at a new line, not at the end of a line of code.
+* Do start a comment with an uppercase letter.
+* Do end a comment with a period.
+* Do add one space between delimiter *//* and a text.
+```csharp
+// It is a first line of a right comment.
+// It is a second line of a right comment.
+```
 * Do add a doc comment for each public class, constructor, method, and property.
 * Do start a doc comment for a class, method, and property with a third person singular present verb.
 ```csharp
@@ -51,14 +59,6 @@ public abstract class EntityBase
   /// <summary>Gets/set a value that represents an ID of an entity.</summary>
   public Guid Id { get; set; }
 }
-```
-* Do start a comment at a new line, not at the end of a line of code.
-* Do start a comment with an uppercase letter.
-* Do end a comment with a period.
-* Do add one space between delimiter *//* and a text.
-```csharp
-// It is a first line of a right comment.
-// It is a second line of a right comment.
 ```
 
 * Do add an empty line in an end of a file.
