@@ -135,6 +135,22 @@ public sealed class Sample
 // It is a first line of a right comment.
 // It is a second line of a right comment.
 ```
+* Do not add a space betwee a tag and a text in a doc comment.
+```csharp
+// Correct.
+/// <summary>Represents detail of an entity.</summary>
+public class Entity
+{
+  // Code.
+}
+
+// Incorrect.
+/// <summary> Represents detail of an entity. </summary>
+public class Entity
+{
+  // Code.
+}
+```
 * Do add a doc comment for each public class, constructor, method, and property.
 * Do start a doc comment for a class, method, and property with a third person singular present verb.
 ```csharp
