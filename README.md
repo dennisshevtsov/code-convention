@@ -184,6 +184,9 @@ public abstract class EntityBase
 {
   /// <summary>Gets/set a value that represents an ID of an entity.</summary>
   public Guid Id { get; set; }
+
+  /// <summary>Gets/sets an object that represents an instance of the <see cref="InfoEntity" /> class. </summary>
+  public InfoEntity Info { get; set; }
 }
 ```
 
