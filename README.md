@@ -674,3 +674,4 @@ public abstract class DtoBase
   /// Code.
 }
 ```
+* Do not create a constructor with more than 7 parameters.
