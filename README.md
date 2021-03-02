@@ -59,6 +59,26 @@ public interface SampleInterfaceName
   // Code.
 }
 ```
+* Do use a modifier for an interface always.
+```csharp
+// Correct.
+public interface ISampleInterfaceName
+{
+  // Code.
+}
+
+// Correct.
+internal interface ISampleInterfaceName
+{
+  // Code.
+}
+
+// Incorrect.
+interface ISampleInterfaceName
+{
+  // Code.
+}
+```
 
 ## Naming
 * Do use Pascal case for a class, an interface, a property, a method, and a constant.
