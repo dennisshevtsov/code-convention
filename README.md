@@ -45,7 +45,6 @@ class SampleClassName
 
 ## Interface
 * Do use prefix I for a name of an interface.
-* Do use Pascal case for a name of an interface.
 ```csharp
 // Correct.
 public interface ISampleInterfaceName
@@ -59,6 +58,7 @@ public interface SampleInterfaceName
   // Code.
 }
 ```
+* Do use Pascal case for a name of an interface.
 * Do use a modifier for an interface always.
 ```csharp
 // Correct.
