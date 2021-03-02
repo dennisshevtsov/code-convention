@@ -8,6 +8,37 @@ public class SampleClassName
   // Code.
 }
 ```
+* Do not use prefix C or other ones for a name of a class.
+```csharp
+// Correct.
+public interface SampleInterfaceName
+{
+  // Code.
+}
+
+// Incorrect.
+public interface CSampleInterfaceName
+{
+  // Code.
+}
+```
+
+## Interface
+* Do use prefix I for a name of an interface.
+* Do use Pascal case for a name of an interface.
+```csharp
+// Correct.
+public interface ISampleInterfaceName
+{
+  // Code.
+}
+
+// Incorrect.
+public interface SampleInterfaceName
+{
+  // Code.
+}
+```
 
 ## Naming
 * Do use Pascal case for a class, an interface, a property, a method, and a constant.
