@@ -1,5 +1,14 @@
 # C# Code Convension
 
+## Class
+* Do use Pascal case for a name of a class.
+```csharp
+public class SampleClassName
+{
+  // Code.
+}
+```
+
 ## Naming
 * Do use Pascal case for a class, an interface, a property, a method, and a constant.
 ```csharp
