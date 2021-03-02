@@ -80,6 +80,18 @@ interface ISampleInterfaceName
 }
 ```
 
+## Constants
+* Do use Pascal case for a name of a constant.
+```csharp
+// Correct.
+public const int DefaultPageSize = 10;
+public const int StartPage = 0;
+
+// Incorrect
+public const int _defaultPageSize = 10;
+public const int START_PAGE = 0;
+```
+
 ## Naming
 * Do use Pascal case for a class, an interface, a property, a method, and a constant.
 ```csharp
