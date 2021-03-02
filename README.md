@@ -22,6 +22,26 @@ public interface CSampleInterfaceName
   // Code.
 }
 ```
+* Do use a modifier for a class always.
+```csharp
+// Correct.
+public class SampleClassName
+{
+  // Code.
+}
+
+// Correct.
+internal class SampleClassName
+{
+  // Code.
+}
+
+// Incorrect.
+class SampleClassName
+{
+  // Code.
+}
+```
 
 ## Interface
 * Do use prefix I for a name of an interface.
