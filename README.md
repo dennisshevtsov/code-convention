@@ -92,6 +92,10 @@ public const int _defaultPageSize = 10;
 public const int START_PAGE = 0;
 ```
 
+## Fields
+* Do use prefix _ for a name of a field.
+
+
 ## Naming
 * Do use Pascal case for a class, an interface, a property, a method, and a constant.
 ```csharp
