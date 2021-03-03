@@ -94,6 +94,7 @@ public const int START_PAGE = 0;
 
 ## Fields
 * Do use prefix _ for a name of a field.
+* Do not use prefix m_ or other ones for a name of a field.
 
 
 ## Naming
