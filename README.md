@@ -107,6 +107,7 @@ private readonly int PageNo;
 private readonly int total;
 private readonly string m_title;
 ```
+* Do not use *public* or *internal* fields.
 
 ## Naming
 * Do use Pascal case for a class, an interface, a property, a method, and a constant.
