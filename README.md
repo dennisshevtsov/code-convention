@@ -95,7 +95,18 @@ public const int START_PAGE = 0;
 ## Fields
 * Do use prefix _ for a name of a field.
 * Do not use prefix m_ or other ones for a name of a field.
+* Do use Camel case for a name of a field.
+```csharp
+// Correct.
+private readonly int _pageNo;
+private readonly int _total;
+private readonly string _title;
 
+// Incorrect.
+private readonly int PageNo;
+private readonly int total;
+private readonly string m_title;
+```
 
 ## Naming
 * Do use Pascal case for a class, an interface, a property, a method, and a constant.
