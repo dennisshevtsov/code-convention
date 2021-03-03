@@ -117,6 +117,7 @@ private readonly int _pageNo;
 readonly int _pageNo;
 ```
 * Do use modifier *readonly* for a field if the field is not changing after initialazing.
+* Do not add empty lines between fields.
 
 ## Naming
 * Do use Pascal case for a class, an interface, a property, a method, and a constant.
