@@ -22,7 +22,7 @@ public interface CSampleInterfaceName
   // Code.
 }
 ```
-* Do use a modifier for a class always.
+* Do always use a modifier for a class.
 ```csharp
 // Correct.
 public class SampleClassName
@@ -43,6 +43,37 @@ class SampleClassName
 }
 ```
 * Do not omit modifier *private* for members of a class.
+```csharp
+// Correct.
+public sealed class Sample
+{
+  private const int Const = 123;
+
+  private readonly int _field;
+
+  private int Property { get; set; }
+
+  private void Method()
+  {
+    // Code.
+  }
+}
+
+// Incorrect.
+public sealed class Sample
+{
+  const int Const = 123;
+
+  readonly int _field;
+
+  int Property { get; set; }
+
+  void Method()
+  {
+    // Code.
+  }
+}
+```
 
 ## Interface
 * Do use prefix I for a name of an interface.
