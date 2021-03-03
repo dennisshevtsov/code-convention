@@ -108,6 +108,15 @@ private readonly int total;
 private readonly string m_title;
 ```
 * Do not use *public* or *internal* fields.
+* Do not omit modifier *private* for a field.
+```csharp
+// Correct.
+private readonly int _pageNo;
+
+// Incorrect.
+readonly int _pageNo;
+```
+* Do use modifier *readonly* for a field if the field is not changing after initialazing.
 
 ## Naming
 * Do use Pascal case for a class, an interface, a property, a method, and a constant.
