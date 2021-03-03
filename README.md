@@ -42,6 +42,7 @@ class SampleClassName
   // Code.
 }
 ```
+* Do not omit modifier *private* for members of a class.
 
 ## Interface
 * Do use prefix I for a name of an interface.
@@ -108,7 +109,6 @@ private readonly int total;
 private readonly string m_title;
 ```
 * Do not use *public* or *internal* fields.
-* Do not omit modifier *private* for a field.
 ```csharp
 // Correct.
 private readonly int _pageNo;
@@ -124,56 +124,6 @@ readonly int _pageNo;
 * Do add empty lines between methods.
 
 ## Naming
-* Do use Pascal case for a class, an interface, a property, a method, and a constant.
-```csharp
-// Correct.
-public abstract class PageDtoBase
-{
-  private const int DefaultPageSize = 10;
-  private const int StartPage = 0;
-
-  public int PageSize { get; set; } = PageDtoBase.DefaultPageSize;
-
-  public int PageNo { get; set; } = PageDtoBase.StartPage;
-
-  public virtual void Clear()
-  {
-    PageSize = PageDtoBase.DefaultPageSize;
-    PageNo = PageDtoBase.StartPage;
-  }
-}
-
-// Incorrect.
-public abstract class PageDtoBase
-{
-  private const int _defaultPageSize = 10;
-  private const int START_PAGE = 0;
-
-  public int pageSize { get; set; } = PageDtoBase._defaultPageSize;
-
-  public int pageNo { get; set; } = PageDtoBase.START_PAGE;
-
-  public virtual void Clear()
-  {
-    pageSize = PageDtoBase._defaultPageSize;
-    pageNo = PageDtoBase.START_PAGE;
-  }
-}
-```
-* Do prefix an interface with letter I.
-```csharp
-// Correct.
-public interface IInterface
-{
-  // Code.
-}
-
-// Incorrect.
-public interface Interface
-{
-  // Code.
-}
-```
 * Do use Camel case for a field, a parameter, and a variable.
 ```csharp
 // Correct.
