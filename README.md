@@ -51,6 +51,11 @@ public sealed class Sample
 
   private readonly int _field;
 
+  private Sample()
+  {
+    // Code.
+  }
+
   private int Property { get; set; }
 
   private void Method()
@@ -66,12 +71,31 @@ public sealed class Sample
 
   readonly int _field;
 
+  Sample()
+  {
+    // Code.
+  }
+
   int Property { get; set; }
 
   void Method()
   {
     // Code.
   }
+}
+```
+* Do not omit modifier *internal* for a class.
+```csharp
+// Correct.
+internal class Sample
+{
+  // Code.
+}
+
+// Incorrect.
+class Sample
+{
+  // Code.
 }
 ```
 
