@@ -121,6 +121,7 @@ readonly int _pageNo;
 
 ## Methods
 * Do use Pascal case for a name of a method.
+* Do add empty lines between methods.
 
 ## Naming
 * Do use Pascal case for a class, an interface, a property, a method, and a constant.
