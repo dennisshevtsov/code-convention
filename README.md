@@ -119,6 +119,9 @@ readonly int _pageNo;
 * Do use modifier *readonly* for a field if the field is not changing after initialazing.
 * Do not add empty lines between fields.
 
+## Methods
+* Do use Pascal case for a name of a method.
+
 ## Naming
 * Do use Pascal case for a class, an interface, a property, a method, and a constant.
 ```csharp
