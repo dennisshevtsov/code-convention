@@ -181,6 +181,10 @@ readonly int _pageNo;
 ## Variable
 * Do use Camel case for a name of a variable.
 * Do not use hungarian notation for a name of a variable.
+* Do not use modifier *const* for a variable.
+
+## Parameter
+* Do use Camel case for a name of a variable.
 
 ## Naming
 * Do use Camel case for a field, a parameter, and a variable.
