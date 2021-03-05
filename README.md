@@ -738,27 +738,10 @@ namespace Foo
 }
 ```
 * Do add the copyright block in a top of each file. For an example:
+* Do use one file for one class, interface etc.
+* Do name a file the same as a class, an interface etc. in the file.
 
 ## Other
-
-* Do use one file for one class, interface etc.
-* Do use access modifiers everytime. Do not hope a default access modifier value.
-```csharp
-// Correct.
-internal class Foo
-{
-  private int _boo;
-}
-
-// Incorrect.
-class Foo
-{
-  int _boo;
-}
-```
-* Do not create a class, a method etc. which name is long than 30 characters.
-* Do name a file the same as a class, an interface etc. in the file.
-* Do refactor a method if there are more than 25 lines in the method.
 * Do prefer using basic classes/interfaces instead concrete ones. *IList<T>* instead *List<T>*, *IEnumerable<T>* instead *IList<T>* etc.
 * Do prefer using arrays instead collections which have no max length.
 * Do call a static member/constant with a class name.
