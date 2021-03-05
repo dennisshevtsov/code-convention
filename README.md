@@ -203,7 +203,7 @@ public sealed class DBOptions
 }
 ```
 
-## Naming
+## CLR Types
 * Do not use the CLR type names to define a type of a variable, a parameter, a field etc.
 ```csharp
 // Correct.
