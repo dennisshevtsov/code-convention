@@ -136,7 +136,7 @@ interface ISampleInterfaceName
 }
 ```
 
-## Constants
+## Constant
 * Do use Pascal case for a name of a constant.
 ```csharp
 // Correct.
@@ -148,7 +148,7 @@ public const int _defaultPageSize = 10;
 public const int START_PAGE = 0;
 ```
 
-## Fields
+## Field
 * Do use prefix _ for a name of a field.
 * Do not use prefix m_ or other ones for a name of a field.
 * Do use Camel case for a name of a field.
@@ -174,7 +174,7 @@ readonly int _pageNo;
 * Do use modifier *readonly* for a field if the field is not changing after initialazing.
 * Do not add empty lines between fields.
 
-## Methods
+## Method
 * Do use Pascal case for a name of a method.
 * Do add empty lines between methods.
 
