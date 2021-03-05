@@ -1,6 +1,6 @@
 # C# Code Convension
 
-## Class
+## Classes
 * Do use Pascal case for a name of a class.
 ```csharp
 public class SampleClassName
@@ -98,8 +98,40 @@ class Sample
   // Code.
 }
 ```
+* Do not use this if is is not required.
+```csharp
+// Correct.
+public class Foo
+{
+  private readonly int _boo;
 
-## Interface
+  public Foo(int boo)
+  {
+    _boo = boo;
+  }
+}
+
+// Incorrect.
+public class Foo
+{
+  private readonly int boo;
+
+  public Foo(int boo)
+  {
+    this.boo = boo;
+  }
+}
+```
+* Do use the *sealed* modifier to each classes, except a case when you are going to inherit a class from it exactly.
+* Do use postfix *Base* for an abstract class.
+```csharp
+public abstract class DtoBase
+{
+  /// Code.
+}
+```
+
+## Interfaces
 * Do use prefix I for a name of an interface.
 ```csharp
 // Correct.
@@ -136,7 +168,84 @@ interface ISampleInterfaceName
 }
 ```
 
-## Constant
+## Enums
+* Do not use the Enam postfix for a name of an enum.
+```csharp
+// Correct.
+public enum Color
+{
+  White = 0,
+  Red = 1,
+}
+
+// Incorrect.
+public enum ColorEnum
+{
+  White = 0,
+  Red = 1,
+}
+```
+* Do use a single noun as a name of an enum.
+```csharp
+// Correct.
+public enum Color
+{
+  White = 0,
+  Red = 1,
+}
+
+// Incorrect.
+public enum Colors
+{
+  White = 0,
+  Red = 1,
+}
+```
+* Do inherit an enum from *byte*, *int* etc. Prefer *byte*.
+```csharp
+// Correct.
+public enum Color : byte
+{
+  White = 0,
+  Red = 1,
+}
+
+// Incorrect.
+public enum Color
+{
+  White = 0,
+  Red = 1,
+}
+```
+* Do assign a default value for an enum.
+```csharp
+// Correct.
+public enum Color : byte
+{
+  White = 0,
+  Red = 1,
+}
+public enum Pet : byte
+{
+  None = 0,
+  Cat = 1,
+  Dog = 2,
+}
+
+// Incorrect.
+public enum Color : byte
+{
+  White,
+  Red,
+}
+public enum Pet : byte
+{
+  Cat = 1,
+  Dog = 2,
+}
+```
+
+## Constants
 * Do use Pascal case for a name of a constant.
 ```csharp
 // Correct.
@@ -148,7 +257,7 @@ public const int _defaultPageSize = 10;
 public const int START_PAGE = 0;
 ```
 
-## Field
+## Fields
 * Do use prefix _ for a name of a field.
 * Do not use prefix m_ or other ones for a name of a field.
 * Do use Camel case for a name of a field.
@@ -174,19 +283,127 @@ readonly int _pageNo;
 * Do use modifier *readonly* for a field if the field is not changing after initialazing.
 * Do not add empty lines between fields.
 
-## Method
+## Methods
 * Do use Pascal case for a name of a method.
-* Do add empty lines between methods.
+* Do add empty lines between methods and a method and other class member.
+```csharp
+// Correct.
+public sealed class SampleService
+{
+  public void Method0()
+  {
+    // Code.
+  }
 
-## Variable
+  public void Method1()
+  {
+    // Code.
+  }
+}
+
+// Incorrect.
+public sealed class SampleService
+{
+  public void Method0()
+  {
+    // Code.
+  }
+  public void Method1()
+  {
+    // Code.
+  }
+}
+```
+
+## Properties
+* Do use Pascal case for a name of a property.
+* Do add an empty line between properties and a property and other class member.
+```csharp
+// Correct.
+public sealed class SampleService
+{
+  public int Property0 { get;set; }
+
+  public int Property1 { get;set; }
+}
+
+// Incorrect.
+public sealed class SampleService
+{
+  public int Property0 { get;set; }
+  public int Property1 { get;set; }
+}
+```
+
+## Constructors
+* Do not omit modifier *private* for a constructor.
+```csharp
+// Correct.
+public sealed class SampleService
+{
+  private SampleService()
+  {
+    // Code.
+  }
+}
+
+// Incorrect.
+public sealed class SampleService
+{
+  SampleService()
+  {
+    // Code.
+  }
+}
+```
+* Do add one empty line between constructors and a constructor and other class member.
+```csharp
+// Correct.
+public sealed class SampleService
+{
+  public SampleService()
+  {
+    // Code.
+  }
+
+  public SampleService(string parameter)
+  {
+    // Code.
+  }
+
+  public void Method()
+  {
+    // Code.
+  }
+}
+
+// Incorrect.
+public sealed class SampleService
+{
+  public SampleService()
+  {
+    // Code.
+  }
+  public SampleService(string parameter)
+  {
+    // Code.
+  }
+  public void Method()
+  {
+    // Code.
+  }
+}
+```
+
+## Variables
 * Do use Camel case for a name of a variable.
 * Do not use hungarian notation for a name of a variable.
 * Do not use modifier *const* for a variable.
 
-## Parameter
+## Parameters
 * Do use Camel case for a name of a variable.
 
-## Abbreviation
+## Abbreviations
 * Do use only well-known abbreviations.
 * Do use Pascal case for an abbreviation.
 ```csharp
@@ -375,83 +592,8 @@ var order = orders.Where(x => x.Enabled)
 ```
 
 # Formatting
-
 * Do add an empty line in an end of a file.
 * Do turn on showing white spaces (VS: ctrl+R, ctrl+W).
-* Do add an empty line between properties, methods, and constructors.
-```csharp
-// Correct.
-public sealed class SampleService
-{
-  public SampleService() {}
-
-  public SampleService(
-    ISampleRepository0 sampleRepository0,
-    ISampleRepository1 sampleRepository1,
-    ISampleRepository2 sampleRepository2,
-    HttpClient httpClient)
-  {
-    // Code.
-  }
-
-  public int Property0 { get;set; }
-
-  public int Property1 { get;set; }
-
-  public void Method() {}
-}
-
-// Incorrect.
-public sealed class SampleService
-{
-  public SampleService() {}
-  public SampleService(
-    ISampleRepository0 sampleRepository0,
-    ISampleRepository1 sampleRepository1,
-    ISampleRepository2 sampleRepository2,
-    HttpClient httpClient)
-  {
-    // Code.
-  }
-
-  public int Property0 { get;set; }
-  public int Property1 { get;set; }
-  public void Method() {}
-}
-```
-* Do add an empty line between groupes of fields only.
-```csharp
-// Correct.
-public sealed class SampleService
-{
-  private readonly ISampleRepository0 _sampleRepository0;
-  private readonly ISampleRepository1 _sampleRepository1;
-  private readonly ISampleRepository2 _sampleRepository2;
-
-  private readonly HttpClient _httpClient;
-}
-
-// Correct too.
-public sealed class SampleService
-{
-  private readonly ISampleRepository0 _sampleRepository0;
-  private readonly ISampleRepository1 _sampleRepository1;
-  private readonly ISampleRepository2 _sampleRepository2;
-  private readonly HttpClient _httpClient;
-}
-
-// Incorrect.
-public sealed class SampleService
-{
-  private readonly ISampleRepository0 _sampleRepository0;
-
-  private readonly ISampleRepository1 _sampleRepository1;
-
-  private readonly ISampleRepository2 _sampleRepository2;
-
-  private readonly HttpClient _httpClient;
-}
-```
 * Do not use an empty line in an end or a start of class, method etc.
 ```csharp
 // Correct.
@@ -497,10 +639,8 @@ public sealed class SampleClass
 
 }
 ```
-* Do group code in methods, properties, and constructors.
-* Do add an empty line between group. Do not add multiple lines.
-* Do use logical block *#ifdef* to configure code for an environment.
-* Do use logical block *#region* to group fields, properties, constructors etc. that have many lines that cannot be collapsed.
+* Can use logical block *#ifdef* to configure code for an environment.
+* Can use logical block *#region* to group fields, properties, constructors etc. that have many lines that cannot be collapsed.
 ```csharp
 // you can collapse the region, but the long constructor.
 public sealed class SampleService
@@ -600,136 +740,6 @@ namespace Foo
 
 ## Other
 
-* Do not use this if is is not required.
-```csharp
-// Correct.
-public class Foo
-{
-  private readonly int _boo;
-
-  public Foo(int boo)
-  {
-    _boo = boo;
-  }
-}
-
-// Incorrect.
-public class Foo
-{
-  private readonly int boo;
-
-  public Foo(int boo)
-  {
-    this.boo = boo;
-  }
-}
-```
-* Do use prefix _ for a field.
-```csharp
-// Correct.
-public class Foo
-{
-  private readonly int _boo;
-}
-
-// Incorrect.
-public class Foo
-{
-  private readonly int boo;
-}
-```
-* Do not use *public* or *internal* fields.
-```csharp
-// Correct.
-public class Foo
-{
-  private int _field0;
-  protected int _field1;
-}
-
-// Incorrect.
-public class Foo
-{
-  public int _field0;
-  internal int _field1;
-}
-```
-* Do use the *sealed* modifier to each classes, except a case when you are going to inherit a class from it exactly.
-* Do not use the Enam postfix for a name of an enum.
-```csharp
-// Correct.
-public enum Color
-{
-  White = 0,
-  Red = 1,
-}
-
-// Incorrect.
-public enum ColorEnum
-{
-  White = 0,
-  Red = 1,
-}
-```
-* Do use a single noun as a name of an enum.
-```csharp
-// Correct.
-public enum Color
-{
-  White = 0,
-  Red = 1,
-}
-
-// Incorrect.
-public enum Colors
-{
-  White = 0,
-  Red = 1,
-}
-```
-* Do inherit an enum from *byte*, *int* etc. Prefer *byte*.
-```csharp
-// Correct.
-public enum Color : byte
-{
-  White = 0,
-  Red = 1,
-}
-
-// Incorrect.
-public enum Color
-{
-  White = 0,
-  Red = 1,
-}
-```
-* Do assign a default value for an enum.
-```csharp
-// Correct.
-public enum Color : byte
-{
-  White = 0,
-  Red = 1,
-}
-public enum Pet : byte
-{
-  None = 0,
-  Cat = 1,
-  Dog = 2,
-}
-
-// Incorrect.
-public enum Color : byte
-{
-  White,
-  Red,
-}
-public enum Pet : byte
-{
-  Cat = 1,
-  Dog = 2,
-}
-```
 * Do use one file for one class, interface etc.
 * Do use access modifiers everytime. Do not hope a default access modifier value.
 ```csharp
@@ -772,13 +782,6 @@ public abstract class PageDtoBase
   public int PageSize { get; set; } = DefaultPageSize;
 
   public int PageNo { get; set; } = StartPage;
-}
-```
-* Do use postfix *Base* for an abstract class.
-```csharp
-public abstract class DtoBase
-{
-  /// Code.
 }
 ```
 * Do not create a constructor with more than 7 parameters.
