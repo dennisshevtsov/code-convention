@@ -178,6 +178,9 @@ readonly int _pageNo;
 * Do use Pascal case for a name of a method.
 * Do add empty lines between methods.
 
+## Variable
+* Do use Camel case for a name of a variable.
+
 ## Naming
 * Do use Camel case for a field, a parameter, and a variable.
 ```csharp
