@@ -186,40 +186,9 @@ readonly int _pageNo;
 ## Parameter
 * Do use Camel case for a name of a variable.
 
-## Naming
-* Do use Camel case for a field, a parameter, and a variable.
-```csharp
-// Correct.
-var abc = "abc";
-var print = () => Console.WriteLine(abc);
-
-// Incorrect.
-var Abc = "abc";
-var Print = () => Console.WriteLine(abc);
-
-// Correct.
-public sealed class Sample
-{
-  private string _abc = "abc";
-
-  public void Print(string abc)
-  {
-    Console.WriteLine(abc);
-  }
-}
-
-// Incorrect.
-public sealed class Sample
-{
-  private string _Abc = "abc";
-
-  public void Print(string Abc)
-  {
-    Console.WriteLine(Abc);
-  }
-}
-```
-* Do use Pascal case for an acronym.
+## Abbreviation
+* Do use only well-known abbreviations.
+* Do use Pascal case for an abbreviation.
 ```csharp
 // Correct.
 public sealed class DbOptions
@@ -233,6 +202,8 @@ public sealed class DBOptions
   // Code.
 }
 ```
+
+## Naming
 * Do not use the CLR type names to define a type of a variable, a parameter, a field etc.
 ```csharp
 // Correct.
