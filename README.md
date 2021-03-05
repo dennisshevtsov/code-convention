@@ -394,6 +394,7 @@ public sealed class SampleService
   }
 }
 ```
+* Do not create a constructor with more than 7 parameters.
 
 ## Variables
 * Do use Camel case for a name of a variable.
@@ -784,4 +785,3 @@ public abstract class PageDtoBase
   public int PageNo { get; set; } = StartPage;
 }
 ```
-* Do not create a constructor with more than 7 parameters.
